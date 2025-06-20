@@ -17,7 +17,4 @@ database:
   password: "123456"
 
 
-resources:
-  limits:
-    memory: "1Gi"  
-    cpu: "300m"
+resources: {}
