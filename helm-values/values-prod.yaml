@@ -16,4 +16,11 @@ database:
   user: postgres
   password: "123456"
 
-resources: {}
+# Thêm resource limits cho backend (quan trọng vì có 3 replicas)
+resources:
+  requests:
+    memory: "128Mi"
+    cpu: "100m"
+  limits:
+    memory: "256Mi"  # 3 pods x 256Mi = 768Mi total
+    cpu: "300m"
