@@ -2,7 +2,7 @@ replicaCount: 2
 image:
   repository: maybetuandat/vdt_backend
   pullPolicy: IfNotPresent
-  tag: "3.4"
+  tag: "3.5"
   
 service:
   type: NodePort
