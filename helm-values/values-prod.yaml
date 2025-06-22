@@ -4,12 +4,16 @@ image:
   pullPolicy: IfNotPresent
   tag: "3.7"
 
-service:
-  type: ClusterIP  
-  port: 8080
-  targetPort: 8080
-  portName: vdt-api-port
+# service:
+#   type: ClusterIP  
+#   port: 8080
+#   targetPort: 8080
+#   portName: vdt-api-port
 
+service:
+  type: NodePort
+  port: 8080
+  nodePort: 30002
 
 ingress:
   enabled: true
