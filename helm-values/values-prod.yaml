@@ -3,12 +3,19 @@ image:
   repository: maybetuandat/vdt_backend
   pullPolicy: IfNotPresent
   tag: "3.7"
-  
-service:
-  type: NodePort
-  port: 8080
-  nodePort: 30002
 
+service:
+  type: ClusterIP  
+  port: 8080
+  targetPort: 8080
+  portName: vdt-api-port
+
+
+ingress:
+  enabled: true
+  host: api.vdt-app.local
+  tls:
+    secretName: vdt-tls-secret
 database:
   host: vdt-database-postgres-chart
   port: 5432
