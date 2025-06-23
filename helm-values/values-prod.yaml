@@ -2,7 +2,7 @@ replicaCount: 2
 image:
   repository: maybetuandat/vdt_backend
   pullPolicy: IfNotPresent
-  tag: "3.8"
+  tag: "3.9"
 
 # service:
 #   type: ClusterIP  
